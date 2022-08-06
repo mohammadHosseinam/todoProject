@@ -1,0 +1,36 @@
+
+@keyframes alartcome{
+    0%{
+        top:0%;
+        left: 0%;
+    }
+    100%{
+        top:-10%;
+        left: 50%;
+    }
+}
+
+@keyframes alartgo{
+    0%{
+        top:0%;
+        left: 50%;
+    }
+    100%{
+        top:0%;
+        left: -10%;
+    }
+}
+.input-styles{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+::placeholder{
+    color: rgb(33, 201, 151);
+}
+.title{
+    color: grey;
+}
+.desc{
+    color:darkgray;
+}
