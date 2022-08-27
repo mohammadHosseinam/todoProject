@@ -4,7 +4,10 @@ import { locattedTodos } from "../components/locattedTodos/index.js";
 import {invalideInputErorrFn} from "../components/invalidInputError/index.js";
 const todoInputText = document.getElementById("inputText");
 const todoTextArea = document.getElementById("textArea");
-const savedTodos = [...locattedTodos()];
+let savedTodos = []
+export function updateSavedTodos(value) {
+  savedTodos = value
+}
 renderNewTodoList();
 export const handleCreatNewTodo = (eventa) => {
   eventa.preventDefault();

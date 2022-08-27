@@ -1,5 +1,6 @@
 import { renderNewTodoList } from "../rerenderNewTodos/index.js";
 import { locattedTodos } from "../locattedTodos/index.js";
+import {updateSavedTodos} from "../../controller/handleCreatNewTodo.js";
 const todoUl = document.getElementById("todoMainUl");
 export function editBtnHandeler(btn, editBtn, inputTitle, paraInput) {
   editBtn.addEventListener("click", () => {
@@ -23,6 +24,7 @@ export function editBtnHandeler(btn, editBtn, inputTitle, paraInput) {
         desc: paraInput.value,
       };
       const editedTodoAndOthers = [...uneditedTodos, newEditedTodo];
+    updateSavedTodos(editedTodoAndOthers)
       localStorage.setItem("todosList", JSON.stringify(editedTodoAndOthers));
       todoUl.innerHTML = "";
       renderNewTodoList();

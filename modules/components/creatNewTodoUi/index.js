@@ -37,8 +37,8 @@ export function creatNewTodoUi(title, desc, id, check) {
   listItem.appendChild(checkBtn);
   delBtn.id = id;
   if (check) {
-    inputTitle.setAttribute("class", "text-success input-styles");
-    paraInput.setAttribute("class", "text-success input-styles");
+    inputTitle.setAttribute("class", "text-primary input-styles");
+    paraInput.setAttribute("class", "text-primary input-styles");
   }
   deletBtnHandeler(delBtn);
   checkBtnHandeler(delBtn, checkBtn);
